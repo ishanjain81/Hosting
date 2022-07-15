@@ -1,0 +1,65 @@
+
+<script>
+    const roomId = "<%= roomId %>"
+    let chat;
+    if(screen.width > 600){
+        chat = true;
+    }
+    else{
+        chat = false;
+    }
+    const user_name = "<%= locals.user.first_name %>";
+</script>
+<script defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script defer src="/js/peer.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"></script>
+<script src="/js/socket_connection.js" defer></script>
+<link rel="stylesheet" href="/css/room.css">
+<link rel="stylesheet" href="/css/chat_box.css">
+<div id="main">
+    <div id="room-head"><h3>VIDEO CHAT</h3></div>
+    <div id="left-part" class="left-half">
+        <div class="videos">
+            <div id="video-box"></div>
+        </div>
+        <div id="left-options">
+            <div id="videoStop" class="button-design">
+                <button class="background-color-blue"> <i class="fas fa-video"></i> </button>
+            </div>
+            <div id="muteButton" class="button-design">
+                <button class="background-color-blue"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div id="chat-show" class="button-design">
+                <button class="background-color-blue"> <i class="fas fa-comment-lines"></i> </button>
+            </div>
+            <div id="add-friend" class="button-design">
+                <button id="friend-open" class="background-color-blue"> <i class="fas fa-user-plus"></i> </button>
+            </div>
+        </div>
+    </div>
+    <div id="right-part" class="right-show">
+        <%- include('_chat_box'); %>
+    </div>
+    <div id="friend-box" class="friend_box">
+        <div class="friend">
+            <h5>INVITE VIA LINK</h5>
+            <button id="friend-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="invite-link">
+                <input id="invite-link-value" type="text" value="Hey">
+                <button id="copy-url">Copy</button>
+            </div>
+            <h5>OR</h5>
+            <h5>INVITE VIA EMAIL</h5>
+            <div id="invite-form">
+                <form action="/room/invite" method="POST" id="invite-forms">
+                    <input type="email" name="email" placeholder="Enter friend's Email" required>
+                    <input  id="current-link" type="hidden" name="link" value="">
+                    <button type="submit"><i class="fad fa-share-all"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/room.js"></script>

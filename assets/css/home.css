@@ -1,0 +1,73 @@
+body {
+  background-image: url("../images/home-image.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#home-container {
+  position: relative;
+  top: 40%;
+  width: 50%;
+  left: 8%; }
+  #home-container h1 {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 550;
+    color: #f15959; }
+
+#inputs {
+  display: flex;
+  position: relative;
+  margin-top: 50px; }
+  #inputs form {
+    margin: 10px;
+    margin-left: -10px; }
+    #inputs form button {
+      height: 45px;
+      width: 8rem;
+      padding: 0;
+      background-color: #0084ff;
+      color: white;
+      font-weight: 600;
+      border-radius: 5px;
+      border: 0.5px solid gray; }
+  #inputs #Meet-code {
+    margin: 10px; }
+    #inputs #Meet-code input {
+      height: 45px;
+      padding: 10px;
+      border-radius: 5px;
+      outline: none;
+      border: 0.5px solid gray; }
+    #inputs #Meet-code button {
+      height: 45px;
+      width: 4rem;
+      border-radius: 5px;
+      color: #0084ff;
+      background-color: transparent;
+      border: none;
+      font-size: large; }
+
+@media (max-width: 600px) {
+  body {
+    background-position: center;
+    background-size: 100% 50%;
+    background-color: yellow;
+    background-repeat: no-repeat; }
+  #home-container {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    text-align: center; }
+    #home-container h1 {
+      margin: 10px;
+      margin-top: 20px;
+      color: #0f0fc0;
+      font-weight: 550; }
+  #inputs {
+    display: block;
+    margin-top: 6rem; }
+    #inputs #Meet-code button {
+      border: none;
+      color: white;
+      letter-spacing: 1px;
+      background-color: #0084ff; } }

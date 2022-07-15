@@ -1,0 +1,35 @@
+{
+  "name": "msclone",
+  "version": "1.0.0",
+  "description": "my own ms clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod_start": "set NODE_ENV=production && nodemon index.js"
+  },
+  "author": "ishan",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.12.14",
+    "morgan": "^1.10.0",
+    "node-sass-middleware": "^0.11.0",
+    "nodemailer": "^6.6.2",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "peer": "^0.6.1",
+    "rotating-file-stream": "^2.1.5",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2",
+    "uuid": "^8.3.2"
+  }
+}

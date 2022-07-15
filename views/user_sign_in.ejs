@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/user_sign_up_in.css">
+<div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        <h2>Sign In Yourself</h2>
+      </div>
+      <div class="row clearfix">
+        <div class="">
+          <form action="/users/create-session" method="POST">
+            <div class="input_field"> <span><span><i aria-hidden="true" class="fa fa-envelope"></i></span></span>
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="input_field"> <span><span><i aria-hidden="true" class="fa fa-lock"></i></span></span>
+              <input type="password" name="password" placeholder="Password" required />
+            </div>
+            <input class="button" type="submit" value="LogIn" />
+          </form>
+        </div>
+      </div>
+      <a id="google-sign" href="/users/auth/google"><button><img src="/images/google-sign-in.png" alt="Google Sign Up"></button></a>
+        <div id="Sign-up-anchor">
+          <p>Didn't have an Account? <a href="/users/sign-up">Sign Up</a></p>
+        </div>
+    </div>
+  </div>
